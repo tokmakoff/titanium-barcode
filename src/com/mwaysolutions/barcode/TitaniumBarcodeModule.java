@@ -24,9 +24,8 @@ import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.KrollObject;
 import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.titanium.TiApplication;
-import org.appcelerator.titanium.TiContext;
 import org.appcelerator.kroll.KrollFunction;
-import org.appcelerator.titanium.util.Log;
+import org.appcelerator.kroll.common.Log;
 import org.appcelerator.titanium.util.TiActivityResultHandler;
 import org.appcelerator.titanium.util.TiActivitySupport;
 import org.appcelerator.titanium.util.TiIntentWrapper;
@@ -49,8 +48,8 @@ public class TitaniumBarcodeModule extends KrollModule {
 	private static final boolean DBG = true; 
 	protected static final int UNKNOWN_ERROR = 0;
 
-	public TitaniumBarcodeModule(final TiContext context) {
-		super(context);
+	public TitaniumBarcodeModule() {
+		super();
 	}
 
 	@Kroll.method

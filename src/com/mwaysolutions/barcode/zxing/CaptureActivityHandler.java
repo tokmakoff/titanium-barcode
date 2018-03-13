@@ -28,7 +28,7 @@ import android.os.Message;
 
 import java.util.Vector;
 
-import org.appcelerator.titanium.util.Log;
+import org.appcelerator.kroll.common.Log;
 
 import com.mwaysolutions.barcode.TitaniumBarcodeActivity;
 import com.mwaysolutions.barcode.camera.CameraManager;

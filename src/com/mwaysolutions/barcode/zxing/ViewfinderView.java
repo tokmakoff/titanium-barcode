@@ -19,7 +19,7 @@ package com.mwaysolutions.barcode.zxing;
 import java.util.Collection;
 import java.util.HashSet;
 
-import org.appcelerator.titanium.util.Log;
+import org.appcelerator.kroll.common.Log;
 
 import com.mwaysolutions.barcode.camera.CameraManager;
 import com.mwaysolutions.barcode.constants.BarcodeColor;
