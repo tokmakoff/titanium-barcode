@@ -124,7 +124,7 @@ public class TitaniumBarcodeModule extends KrollModule {
 			logError("error: " + msg); 
 			if (errorCallback != null) {
 				errorCallback
-						.callAsync((KrollObject)errorCallback,createErrorResponse(UNKNOWN_ERROR, msg));
+						.callAsync(getKrollObject(),createErrorResponse(UNKNOWN_ERROR, msg));
 			}
 		}
 
@@ -135,14 +135,14 @@ public class TitaniumBarcodeModule extends KrollModule {
 			if (resultCode == Activity.RESULT_CANCELED) {
 				logDebug("scan canceled");
 				if (cancelCallback != null) {
-					cancelCallback.callAsync((KrollObject)cancelCallback,new KrollDict());
+					cancelCallback.callAsync(getKrollObject(),new KrollDict());
 				}
 			} else {
 				logDebug("scan successful");
 				String result = data
 						.getStringExtra(TitaniumBarcodeActivity.EXTRA_RESULT);
 				logDebug("scan result: " + result);
-				successCallback.callAsync((KrollObject)successCallback,getDictForResult(result));
+				successCallback.callAsync(getKrollObject(),getDictForResult(result));
 			}
 		}
 	}
